@@ -92,18 +92,31 @@
 //     console.log(err)
 // }
 
-let nick_name = "Calvin"
-let age = 20
+// //7
+// let nick_name = "Calvin"
+// let age = 20
 
-let person = 
-{
-    nick_name,
-    age
-}
+// let person = 
+// {
+//     nick_name,
+//     age
+// }
 
-console.log("Person: ", person, "Name: ", person.nick_name, "Age: ", person.age)
+// // console.log("Person: ", person, "Name: ", person.nick_name, "Age: ", person.age)
+
+// // console.log(person['nick_name'])
+// // console.log(person['age'])
 
 
+//8
+let isArray = ['Red', "yellow"]
+console.log(isArray)
+isArray.push('Blue')
+console.log(isArray)
+isArray.pop()
+console.log(isArray)
+isArray.push(1)
+console.log(isArray)
 
 
 
