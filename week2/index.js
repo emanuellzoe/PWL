@@ -108,15 +108,55 @@
 // // console.log(person['age'])
 
 
-//8
-let isArray = ['Red', "yellow"]
-console.log(isArray)
-isArray.push('Blue')
-console.log(isArray)
-isArray.pop()
-console.log(isArray)
-isArray.push(1)
-console.log(isArray)
+// //8
+// let isArray = ['Red', "yellow"]
+// console.log(isArray)
+// isArray.push('Blue')
+// console.log(isArray)
+// isArray.pop()
+// console.log(isArray)
+// isArray.push(1)
+// console.log(isArray)
 
+// //9
+// function rectangle(w,h)
+// {
+//     return w * h
+// }
+// console.log(rectangle(10,5))
+
+// const rectangle2 = function(wd,hg)
+// {
+//     return wd * hg
+// }
+// console.log(rectangle2(7,3))
+
+
+// //10
+// const rectangle = (h,w) =>
+// {
+//     return h * w
+// }
+// console.log(rectangle(10,5))
+
+// const rec = (h,w) => h * w //jika hanya 1 baris return bisa seperti ini
+// console.log(rec(7,3))  
+
+//11
+var person =
+{
+    nname : "john",
+    sisters : ["jane", "jill", "udin"],
+    showData: function()
+    {
+        this.sisters.map(
+            function(sister)
+            {
+                console.log(this.nname + " has a sister named " + sister)
+            }.bind(this)
+        )
+    },
+}
+person.showData()
 
 
