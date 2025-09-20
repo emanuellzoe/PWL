@@ -97,7 +97,7 @@ let age = 20
 
 let person = 
 {
-    nickname,
+    nick_name,
     age
 }
 
