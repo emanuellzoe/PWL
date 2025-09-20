@@ -142,21 +142,66 @@
 // const rec = (h,w) => h * w //jika hanya 1 baris return bisa seperti ini
 // console.log(rec(7,3))  
 
-//11
-var person =
-{
-    nname : "john",
-    sisters : ["jane", "jill", "udin"],
-    showData: function()
-    {
-        this.sisters.map(
-            function(sister)
-            {
-                console.log(this.nname + " has a sister named " + sister)
-            }.bind(this)
-        )
-    },
-}
-person.showData()
+// //11
+// var person =
+// {
+//     nname : "john",
+//     sisters : ["jane", "jill", "udin"],
+//     showData: function()
+//     {
+//         this.sisters.map(
+//             function(sister)
+//             {
+//                 console.log(this.nname + " has a sister named " + sister)
+//             }.bind(this)
+//         )
+//     },
+// }
+// person.showData()
 
+// var person2 = 
+// {
+//     nname : "john",
+//     sisters : ["jane", "jill", "udin"],
+//     showData: function()
+//     {
+//         this.sisters.map(
+//             (sister) =>
+//             {
+//                 console.log(`${sister} is a sister of ${this.nname}`)
+//             }
+//         )
+//     },
+// }
+// person2.showData()
+
+
+
+// //12
+// const rec = (h=1, w=1) => {return h * w}
+
+// console.log(rec())
+// console.log(rec(10))
+// console.log(rec(10,5))
+
+
+// //13
+// const Mess = (Nama, usia) =>
+// {
+//     return{
+//         Nama,
+//         usia
+//     }
+// }
+
+// const pesan = Mess('Calvin', 20)
+// console.log(pesan.Nama)
+
+//14
+let person = {
+    first_name: "John",
+    last_name: "Doe",
+}
+let { first_name: fname, last_name: lname } = person
+document.getElementById('app').innerHTML = `${fname} ${lname}`
 
