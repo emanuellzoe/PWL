@@ -11,8 +11,9 @@ const p1 = [34,45,12,13]
 const p2 = [67,89,90]
 const p3 = [11,22,33,44]
 
-const angka = Math.max(...p1, ...p2, ...p3)
-document.getElementById('beta').innerHTML = angka
+const angka = [p1, p2, p3];
+const NilaiTerbesar = angka.map(arr => Math.max(...arr))
+document.getElementById('beta').innerHTML = `Nilai terbesar: ${NilaiTerbesar.join(', ')}`
 
 
 // 2
