@@ -93,12 +93,35 @@
 // document.getElementById("beta").innerHTML = `Today is ${day()}`;
 
 //4
-function prosesData(data, callback) {
-    let res = data.topUpperCase()
-    callback(res)
+// function prosesData(data, callback) {
+//     let res = data.topUpperCase()
+//     callback(res)
+// }
+// function showRes(output) {
+//     document.getElementById("beta").innerHTML = `Teks: ${output}`
+// }
+// prosesData("hello", showRes)
+
+//5 
+function getData() {
+    return new Promise((resolve, reject) => {
+        document.getElementById("beta").innerHTML = "Loading..."
+
+        setTimeout(() => {
+            const sukses = true
+            if (sukses) {
+                resolve("Data sukses dikirim")
+            } else {
+                reject("Data gagal dikirim")
+            }
+        }, 1000)
+    })
 }
-function showRes(output) {
-    document.getElementById("beta").innerHTML = `Teks: ${output}`
-}
-prosesData("hello", showRes)
+getData()
+.then(result => {
+    document.getElementById("beta").innerHTML = result
+})
+.catch(error => {
+    document.getElementById("beta").innerHTML = error
+})
 
