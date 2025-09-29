@@ -1,13 +1,11 @@
-// const names = ["Andi", "Budi", "Tono", "Joko", "Joni", "Jono"];
-// let tampung = "";
-
-// for(let i=0; i<6; i++)
-// {
+const names = ["Andi", "Budi", "Tono", "Joko", "Joni", "Jono"];
+let tampung = "";
+for(let i=0; i<6; i++)
+{
     
-//     tampung += names[i] + ", ";
-// }
-
-// document.getElementById('app').innerHTML = tampung;
+    tampung += names[i] + ", ";
+}
+document.getElementById('alpa').innerHTML = tampung;
 
 // const mobil = [
 //     {merek : "Toyota", jum_kabin : 2, nama : "Supra"},

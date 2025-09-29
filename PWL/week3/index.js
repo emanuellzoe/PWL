@@ -17,8 +17,8 @@
 
 
 // 2
-import { merek, warna } from './mobil.js';
-import j from './jw.js';
-let ket_mobil = `Merek mobil: ${merek}, Warna mobil: ${warna}`;
-document.getElementById('alpa').innerHTML = ket_mobil;
-document.getElementById('beta').innerHTML = j()
+// import { merek, warna } from './mobil.js';
+// import j from './jw.js';
+// let ket_mobil = `Merek mobil: ${merek}, Warna mobil: ${warna}`;
+// document.getElementById('alpa').innerHTML = ket_mobil;
+// document.getElementById('beta').innerHTML = j()
