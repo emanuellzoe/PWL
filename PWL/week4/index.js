@@ -57,36 +57,48 @@
 
 
 //3
-// perbedaan if else dan switch case
-// if else akan mengecek kondisi satu persatu
-// switch case akan langsung menuju ke kondisi yang sesuai
-// switch case lebih efisien jika banyak kondisi
+// // perbedaan if else dan switch case
+// // if else akan mengecek kondisi satu persatu
+// // switch case akan langsung menuju ke kondisi yang sesuai
+// // switch case lebih efisien jika banyak kondisi
 
-//contoh switch case
-const day = () => {
-    switch (new Date().getDay()) {
-        case 0:
-            return "Sunday";
-            break;
-        case 1:
-            return "Monday";
-            break;
-        case 2:
-            return "Tuesday";
-            break;
-        case 3:
-            return "Wednesday";
-            break;
-        case 4:
-            return "Thursday";
-            break;
-        case 5:
-            return "Friday";
-            break;
-        case 6:
-            return "Saturday";
-            break;
-    }
+// //contoh switch case
+// const day = () => {
+//     switch (new Date().getDay()) {
+//         case 0:
+//             return "Sunday";
+//             break;
+//         case 1:
+//             return "Monday";
+//             break;
+//         case 2:
+//             return "Tuesday";
+//             break;
+//         case 3:
+//             return "Wednesday";
+//             break;
+//         case 4:
+//             return "Thursday";
+//             break;
+//         case 5:
+//             return "Friday";
+//             break;
+//         case 6:
+//             return "Saturday";
+//             break;
+//         default:
+//             return "Not option";
+//     }
+// }
+// document.getElementById("beta").innerHTML = `Today is ${day()}`;
+
+//4
+function prosesData(data, callback) {
+    let res = data.topUpperCase()
+    callback(res)
 }
-console.log(`Today is ${day()}`);
+function showRes(output) {
+    document.getElementById("beta").innerHTML = `Teks: ${output}`
+}
+prosesData("hello", showRes)
 
