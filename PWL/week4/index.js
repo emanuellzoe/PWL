@@ -103,25 +103,43 @@
 // prosesData("hello", showRes)
 
 //5 
-function getData() {
-    return new Promise((resolve, reject) => {
-        document.getElementById("beta").innerHTML = "Loading..."
+// function getData() {
+//     return new Promise((resolve, reject) => {
+//         document.getElementById("beta").innerHTML = "Loading..."
 
+//         setTimeout(() => {
+//             const sukses = true
+//             if (sukses) {
+//                 resolve("Data sukses dikirim")
+//             } else {
+//                 reject("Data gagal dikirim")
+//             }
+//         }, 1000)
+//     })
+// }
+// getData()
+// .then(result => {
+//     document.getElementById("beta").innerHTML = result
+// })
+// .catch(error => {
+//     document.getElementById("beta").innerHTML = error
+// })
+
+function nodesatu() {
+    document.getElementById("beta").innerHTML = "Node 1"
+}
+function nodedua() {
+    return new Promise((resolve) => {
         setTimeout(() => {
-            const sukses = true
-            if (sukses) {
-                resolve("Data sukses dikirim")
-            } else {
-                reject("Data gagal dikirim")
-            }
-        }, 1000)
+            resolve("Node 2")
+        }, 2000)
     })
 }
-getData()
-.then(result => {
-    document.getElementById("beta").innerHTML = result
-})
-.catch(error => {
-    document.getElementById("beta").innerHTML = error
-})
+function nodetiga() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Node 3")
+        }, 3000)
+    })
+}
 
