@@ -96,14 +96,14 @@ for (let b of buahan)
 
 
 
-//filter data
-// const usia = [32, 15, 19, 12, 25, 16, 28];
+filter data
+const usia = [32, 15, 19, 12, 25, 16, 28];
 
-// const cek_usia = (u) => u < 20
-// const res = usia.filter(cek_usia)
+const cek_usia = (u) => u < 20
+const res = usia.filter(cek_usia)
 
-// const cek = cek_usia(25)
+const cek = cek_usia(25)
 
-// console.log(cek)
+console.log(cek)
 
 
