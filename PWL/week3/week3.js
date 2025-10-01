@@ -73,36 +73,36 @@
 // console.log(obj['name'])
 
 
-let set = new Set();
+// let set = new Set();
 
-let john = { name : "John"};
-let pete = { name : "Pete"};
-let mary = { name : "Mary"};
+// let john = { name : "John"};
+// let pete = { name : "Pete"};
+// let mary = { name : "Mary"};
 
-set.add(john);
-set.add(pete);
-set.add(mary);
-
-
-let dara = { name : "Dara"};
-set.add(dara);
-
-console.log(set.size)
-
-for (let usr of set)
-{
-    console.log(usr.name)
-}
+// set.add(john);
+// set.add(pete);
+// set.add(mary);
 
 
+// let dara = { name : "Dara"};
+// set.add(dara);
 
-// filter data
+// console.log(set.size)
+
+// for (let usr of set)
+// {
+//     console.log(usr.name)
+// }
+
+
+
+// // filter data
 // const usia = [32, 15, 19, 12, 25, 16, 28];
 
 // const cek_usia = (u) => u < 20
 // const res = usia.filter(cek_usia)
 
-// const cek = cek_usia(25)
+// const cek = cek_usia(19)
 
 // console.log(cek)
 
