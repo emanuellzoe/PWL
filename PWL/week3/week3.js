@@ -7,11 +7,11 @@
 // }
 // document.getElementById('alpa').innerHTML = tampung;
 
-const mobil = [
-    {merek : "Toyota", jum_kabin : 2, nama : "Supra"},
-    {merek : "Honda", jum_kabin : 4, nama : "Civic"},
-    {merek : "Lamborghini", jum_kabin : 2, nama : "Aventador"},
-]
+// const mobil = [
+//     {merek : "Toyota", jum_kabin : 2, nama : "Supra"},
+//     {merek : "Honda", jum_kabin : 4, nama : "Civic"},
+//     {merek : "Lamborghini", jum_kabin : 2, nama : "Aventador"},
+// ]
  
 // let tampung = "<table border='1'><tr><th>Merek</th><th>Jumlah Kabin</th><th>Nama</th></tr>";
 
@@ -29,31 +29,31 @@ const mobil = [
 // document.getElementById('beta').innerHTML = ket;
 
 
-let buahan = new Map([
-    ["Apel", 5000],
-    ["Jeruk", 8000],
-    ["Mangga", 10000],
-    ["Duku", 15000],
-    ["Durian", 20000],
-    ["Salak", 12000]
-])
+// let buahan = new Map([
+//     ["Apel", 5000],
+//     ["Jeruk", 8000],
+//     ["Mangga", 10000],
+//     ["Duku", 15000],
+//     ["Durian", 20000],
+//     ["Salak", 12000]
+// ])
 
-document.getElementById('alpa').innerHTML = buahan.get("Mangga") 
+// document.getElementById('alpa').innerHTML = buahan.get("Mangga") 
 
-for (let b of buahan.values())
-{
-    document.getElementById('beta').innerHTML = b
-}
+// for (let b of buahan.values())
+// {
+//     document.getElementById('beta').innerHTML = b
+// }
 
-for (let b of buahan.keys())
-{
-    document.getElementById('ceta').innerHTML = b
-}
+// for (let b of buahan.keys())
+// {
+//     document.getElementById('ceta').innerHTML = b
+// }
 
-for (let b of buahan)
-{
-    document.getElementById('deta').innerHTML = b
-}
+// for (let b of buahan)
+// {
+//     document.getElementById('deta').innerHTML = b
+// }
 
 
 // let map = new Map([
@@ -73,26 +73,26 @@ for (let b of buahan)
 // console.log(obj['name'])
 
 
-// let set = new Set();
+let set = new Set();
 
-// let john = { name : "John"};
-// let pete = { name : "Pete"};
-// let mary = { name : "Mary"};
+let john = { name : "John"};
+let pete = { name : "Pete"};
+let mary = { name : "Mary"};
 
-// set.add(john);
-// set.add(pete);
-// set.add(mary);
+set.add(john);
+set.add(pete);
+set.add(mary);
 
 
-// let dara = { name : "Dara"};
-// set.add(dara);
+let dara = { name : "Dara"};
+set.add(dara);
 
-// console.log(set.size)
+console.log(set.size)
 
-// for (let usr of set)
-// {
-//     console.log(usr.name)
-// }
+for (let usr of set)
+{
+    console.log(usr.name)
+}
 
 
 
