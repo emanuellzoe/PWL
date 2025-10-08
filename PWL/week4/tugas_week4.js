@@ -39,22 +39,22 @@
 //     .catch(error => console.log(error));
 
 //Nomor 4
-function getData() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Data ditemukan");
-        }, 2000);
-    });
-}
-async function showData() {
-    try {
-        const result = await getData();
-        console.log(result);
-    } catch (error) {
-        console.log(error);
-    }
-}
-showData();
+// function getData() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Data ditemukan");
+//         }, 2000);
+//     });
+// }
+// async function showData() {
+//     try {
+//         const result = await getData();
+//         console.log(result);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// showData();
 
 
 
