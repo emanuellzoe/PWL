@@ -125,21 +125,23 @@
 //     document.getElementById("beta").innerHTML = error
 // })
 
-function nodesatu() {
-    document.getElementById("beta").innerHTML = "Node 1"
-}
-function nodedua() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Node 2")
-        }, 2000)
-    })
-}
-function nodetiga() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve("Node 3")
-        }, 3000)
-    })
-}
+
+
+// function nodesatu() {
+//     document.getElementById("beta").innerHTML = "Node 1"
+// }
+// function nodedua() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Node 2")
+//         }, 2000)
+//     })
+// }
+// function nodetiga() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Node 3")
+//         }, 3000)
+//     })
+// }
 
