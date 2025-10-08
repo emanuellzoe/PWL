@@ -29,30 +29,30 @@
 //(boolean expression) ? true : false
 //DATA
 
-// const today = {
-//     day: 1,
-//     name: "Monday"
-// }
+const today = {
+    day: 1,
+    name: "Monday"
+}
 
-// const harilain = {
-//     day: 5,
-//     name: "Friday"
-// }
+const harilain = {
+    day: 5,
+    name: "Friday"
+}
 
-// //Ternary
-// new Date().getDay() === today.day ? (console.log(`Today is ${today.name}`)) : (console.log ("NotToday"))
+//Ternary
+new Date().getDay() === today.day ? (console.log(`Today is ${today.name}`)) : (console.log ("NotToday"))
 
-// //Ternary single condition
-// new Date().getDay() === today.day
-// ? (console.log(`Today is ${today.name}`))
-// : (console.log (`Today is not ${today.name} and not ${harilain.name}`))
+//Ternary single condition
+new Date().getDay() === today.day
+? (console.log(`Today is ${today.name}`))
+: (console.log (`Today is not ${today.name} and not ${harilain.name}`))
 
-// //Multiple condition
-// new Date().getDay() === today.day
-// ? (console.log(`Today is ${today.name}`))
-// : new Date().getDay() === harilain.day
-//     ? (console.log(`Today is ${harilain.name}`))
-//     : (console.log (`Today is not ${today.name} and not ${harilain.name}`))
+//Multiple condition
+new Date().getDay() === today.day
+? (console.log(`Today is ${today.name}`))
+: new Date().getDay() === harilain.day
+    ? (console.log(`Today is ${harilain.name}`))
+    : (console.log (`Today is not ${today.name} and not ${harilain.name}`))
 
 
 

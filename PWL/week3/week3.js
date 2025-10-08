@@ -7,11 +7,11 @@
 // }
 // document.getElementById('alpa').innerHTML = tampung;
 
-const mobil = [
-    {merek : "Toyota", jum_kabin : 2, nama : "Supra"},
-    {merek : "Honda", jum_kabin : 4, nama : "Civic"},
-    {merek : "Lamborghini", jum_kabin : 2, nama : "Aventador"},
-]
+// const mobil = [
+//     {merek : "Toyota", jum_kabin : 2, nama : "Supra"},
+//     {merek : "Honda", jum_kabin : 4, nama : "Civic"},
+//     {merek : "Lamborghini", jum_kabin : 2, nama : "Aventador"},
+// ]
  
 // let tampung = "<table border='1'><tr><th>Merek</th><th>Jumlah Kabin</th><th>Nama</th></tr>";
 
@@ -29,31 +29,31 @@ const mobil = [
 // document.getElementById('beta').innerHTML = ket;
 
 
-let buahan = new Map([
-    ["Apel", 5000],
-    ["Jeruk", 8000],
-    ["Mangga", 10000],
-    ["Duku", 15000],
-    ["Durian", 20000],
-    ["Salak", 12000]
-])
+// let buahan = new Map([
+//     ["Apel", 5000],
+//     ["Jeruk", 8000],
+//     ["Mangga", 10000],
+//     ["Duku", 15000],
+//     ["Durian", 20000],
+//     ["Salak", 12000]
+// ])
 
-document.getElementById('alpa').innerHTML = buahan.get("Mangga") 
+// document.getElementById('alpa').innerHTML = buahan.get("Mangga") 
 
-for (let b of buahan.values())
-{
-    document.getElementById('beta').innerHTML = b
-}
+// for (let b of buahan.values())
+// {
+//     document.getElementById('beta').innerHTML = b
+// }
 
-for (let b of buahan.keys())
-{
-    document.getElementById('ceta').innerHTML = b
-}
+// for (let b of buahan.keys())
+// {
+//     document.getElementById('ceta').innerHTML = b
+// }
 
-for (let b of buahan)
-{
-    document.getElementById('deta').innerHTML = b
-}
+// for (let b of buahan)
+// {
+//     document.getElementById('deta').innerHTML = b
+// }
 
 
 // let map = new Map([
@@ -96,13 +96,13 @@ for (let b of buahan)
 
 
 
-// filter data
+// // filter data
 // const usia = [32, 15, 19, 12, 25, 16, 28];
 
 // const cek_usia = (u) => u < 20
 // const res = usia.filter(cek_usia)
 
-// const cek = cek_usia(25)
+// const cek = cek_usia(19)
 
 // console.log(cek)
 
