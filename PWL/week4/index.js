@@ -1,29 +1,29 @@
 //1
-// const getDay = () => {
-//     if (new Date().getDay() === 0) {
-//         return "Sunday"
-//     }
-//     if (new Date().getDay() === 1) {
-//         return "Monday"
-//     }
-//     if (new Date().getDay() === 2) {
-//         return "Tuesday"
-//     }
-//     if (new Date().getDay() === 3) {
-//         return "Wednesday"
-//     }
-//     if (new Date().getDay() === 4) {
-//         return "Thursday"
-//     }
-//     if (new Date().getDay() === 5) {
-//         return "Friday"
-//     }
-//     if (new Date().getDay() === 6) {
-//         return "Saturday"
-//     }                                    
-// }
+const getDay = () => {
+    if (new Date().getDay() === 0) {
+        return "Sunday"
+    }
+    if (new Date().getDay() === 1) {
+        return "Monday"
+    }
+    if (new Date().getDay() === 2) {
+        return "Tuesday"
+    }
+    if (new Date().getDay() === 3) {
+        return "Wednesday"
+    }
+    if (new Date().getDay() === 4) {
+        return "Thursday"
+    }
+    if (new Date().getDay() === 5) {
+        return "Friday"
+    }
+    if (new Date().getDay() === 6) {
+        return "Saturday"
+    }                                    
+}
 
-// document.getElementById("beta").innerHTML = `Today is ${getDay()}`
+document.getElementById("beta").innerHTML = `Today is ${getDay()}`
 
 //2
 //(boolean expression) ? true : false

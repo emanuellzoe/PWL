@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route ::get('home', 'PageController@home');
+Route ::get('galery', 'PageController@galery');
+Route ::get('profile', 'PageController@profile');
+Route ::post('galery/submit', 'PageController@submit');
