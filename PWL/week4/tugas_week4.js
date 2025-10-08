@@ -22,20 +22,39 @@
 // }, 2000);
 
 //Nomor 3
-function cekAngka(num) {
-    return new Promise((resolve, reject) => {
-        if (num % 2 === 0) {
-            resolve("Angka genap");
-        } else {
-            reject("Angka ganjil");
-        }
+// function cekAngka(num) {
+//     return new Promise((resolve, reject) => {
+//         if (num % 2 === 0) {
+//             resolve("Angka genap");
+//         } else {
+//             reject("Angka ganjil");
+//         }
+//     });
+// }
+// cekAngka(7)
+//     .then(result => console.log(result))
+//     .catch(error => console.log(error));
+// cekAngka(4)
+//     .then(result => console.log(result))
+//     .catch(error => console.log(error));
+
+//Nomor 4
+function getData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data ditemukan");
+        }, 2000);
     });
 }
-cekAngka(7)
-    .then(result => console.log(result))
-    .catch(error => console.log(error));
-cekAngka(4)
-    .then(result => console.log(result))
-    .catch(error => console.log(error));
+async function showData() {
+    try {
+        const result = await getData();
+        console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
+}
+showData();
+
 
 
