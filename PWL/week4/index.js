@@ -29,34 +29,34 @@
 //(boolean expression) ? true : false
 //DATA
 
-const today = {
-    day: 1,
-    name: "Monday"
-}
+// const today = {
+//     day: 1,
+//     name: "Monday"
+// }
 
-const harilain = {
-    day: 5,
-    name: "Friday"
-}
+// const harilain = {
+//     day: 5,
+//     name: "Friday"
+// }
 
-//Ternary
-new Date().getDay() === today.day ? (console.log(`Today is ${today.name}`)) : (console.log ("NotToday"))
+// //Ternary
+// new Date().getDay() === today.day ? (console.log(`Today is ${today.name}`)) : (console.log ("NotToday"))
 
-//Ternary single condition
-new Date().getDay() === today.day
-? (console.log(`Today is ${today.name}`))
-: (console.log (`Today is not ${today.name} and not ${harilain.name}`))
+// //Ternary single condition
+// new Date().getDay() === today.day
+// ? (console.log(`Today is ${today.name}`))
+// : (console.log (`Today is not ${today.name} and not ${harilain.name}`))
 
-//Multiple condition
-new Date().getDay() === today.day
-? (console.log(`Today is ${today.name}`))
-: new Date().getDay() === harilain.day
-    ? (console.log(`Today is ${harilain.name}`))
-    : (console.log (`Today is not ${today.name} and not ${harilain.name}`))
+// //Multiple condition
+// new Date().getDay() === today.day
+// ? (console.log(`Today is ${today.name}`))
+// : new Date().getDay() === harilain.day
+//     ? (console.log(`Today is ${harilain.name}`))
+//     : (console.log (`Today is not ${today.name} and not ${harilain.name}`))
 
 
 
-//3
+// //3
 // // perbedaan if else dan switch case
 // // if else akan mengecek kondisi satu persatu
 // // switch case akan langsung menuju ke kondisi yang sesuai
@@ -92,16 +92,22 @@ new Date().getDay() === today.day
 // }
 // document.getElementById("beta").innerHTML = `Today is ${day()}`;
 
-//4
-// function prosesData(data, callback) {
-//     let res = data.topUpperCase()
-//     callback(res)
-// }
-// function showRes(output) {
-//     document.getElementById("beta").innerHTML = `Teks: ${output}`
-// }
-// prosesData("hello", showRes)
 
+//4
+function prosesData(data, callback) {
+            let res = data.toUpperCase(); // perbaikan di sini
+            callback(res);
+        }
+
+        function showRes(output) {
+            document.getElementById("beta").innerHTML = `Teks: ${output}`;
+        }
+
+        // Jalankan setelah halaman siap
+        window.onload = function() {
+            prosesData("hello", showRes);
+        };
+        
 //5 
 // function getData() {
 //     return new Promise((resolve, reject) => {
