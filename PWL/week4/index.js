@@ -133,34 +133,34 @@
 
 
 
-function nodesatu() {
-            document.getElementById("beta").innerHTML = "Node 1";
-        }
+// function nodesatu() {
+//             document.getElementById("beta").innerHTML = "Node 1";
+//         }
 
-        function nodedua() {
-            return new Promise((resolve) => {
-                setTimeout(() => {
-                    resolve("Node 2");
-                }, 2000);
-            });
-        }
+//         function nodedua() {
+//             return new Promise((resolve) => {
+//                 setTimeout(() => {
+//                     resolve("Node 2");
+//                 }, 2000);
+//             });
+//         }
 
-        function nodetiga() {
-            return new Promise((resolve) => {
-                setTimeout(() => {
-                    resolve("Node 3");
-                }, 3000);
-            });
-        }
+//         function nodetiga() {
+//             return new Promise((resolve) => {
+//                 setTimeout(() => {
+//                     resolve("Node 3");
+//                 }, 3000);
+//             });
+//         }
 
-        // Perbaikan: gunakan async/await agar berjalan berurutan
-        async function jalankanNode() {
-            nodesatu(); // langsung tampil Node 1
-            const dua = await nodedua(); // tunggu 2 detik
-            document.getElementById("beta").innerHTML += `<br>${dua}`;
-            const tiga = await nodetiga(); // tunggu 3 detik
-            document.getElementById("beta").innerHTML += `<br>${tiga}`;
-        }
+//         // Perbaikan: gunakan async/await agar berjalan berurutan
+//         async function jalankanNode() {
+//             nodesatu(); // langsung tampil Node 1
+//             const dua = await nodedua(); // tunggu 2 detik
+//             document.getElementById("beta").innerHTML += `<br>${dua}`;
+//             const tiga = await nodetiga(); // tunggu 3 detik
+//             document.getElementById("beta").innerHTML += `<br>${tiga}`;
+//         }
 
-        // Jalankan setelah halaman siap
-        window.onload = jalankanNode;
+//         // Jalankan setelah halaman siap
+//         window.onload = jalankanNode;
