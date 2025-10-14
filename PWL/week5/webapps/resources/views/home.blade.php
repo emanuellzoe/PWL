@@ -4,3 +4,4 @@ Hello, {{ $nama }}!
     <br>{{ $k }}
 
 @endforeach
+selamat datang di website saya
