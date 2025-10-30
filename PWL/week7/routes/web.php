@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,6 @@
 */
 
 //1
-Route::get('/', "PageController@home");
-Route::get('/movie', "PageController@movie");
-Route::get('/genre', "PageController@genre");
-
+Route::get('/', 'PageController@home');
+Route::get('/movie', 'PageController@movie');
+Route::get('/genre', 'PageController@genre');
