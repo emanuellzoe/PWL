@@ -20,9 +20,20 @@
             <i class="bi bi-person-fill"></i> User
           </button>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-            <button class="dropdown-item" type="#">Action</button>
-            <button class="dropdown-item" type="#">Another action</button>
-            <button class="dropdown-item" type="#">Something else here</button>
+            <a class="dropdown-item" type="#">
+              <div class="media">
+                <img src="https://i.pinimg.com/736x/dc/09/8a/dc098aefa6d83755f223da9f8206bc6f.jpg"
+                  width="50" height="50" class="align-self-center mr-3" alt="...">
+                <div class="media-body">
+                  <h5 class="mt-0">Jiwo</h5>
+                  <small>
+                    <p class="mb-0"><i class="bi bi-clock"></i> Pkl 16:00 WIB</p>
+                  </small>
+                </div>
+              </div>
+            </a>
+            <a class="dropdown-item" type="#">Setting</a>
+            <a class="dropdown-item" type="#">Logout</a>
           </div>
         </div>
       </div>
@@ -34,6 +45,16 @@
     </div>
 
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
