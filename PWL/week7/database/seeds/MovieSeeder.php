@@ -2,8 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
+use Faker\Factory as Faker;
 
 class MovieSeeder extends Seeder
 {
@@ -14,13 +13,17 @@ class MovieSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('movie')->insert([
-            'imdb' => 'tt12314',
-            'title' => 'Inception',
-            'genre' => 'Sci-Fi',
-            'year' => 2010,
-            'description' => 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.',
-            'cover' => 'inception.jpg',
-        ]);
+        $faker = Faker::create('id_ID');
+
+        for ($i = 1; $i <= 100; $i++) {
+            DB::table('movie')->insert([
+                'imdb' => $faker->uuid(),
+                'title' => $faker->words(3, true),
+                'genre' => $faker->word(),
+                'year' => $faker->date('Y'),
+                'description' => $faker->text(),
+                'cover' => $faker->imageUrl(640, 480, 'animals'),
+            ]);
+        }
     }
 }
