@@ -14,16 +14,7 @@ class CreateMovieTable extends Migration
      */
     public function up()
     {
-        Schema::create('movie', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('imdb', 100)->unique();
-            $table->string('title', 30);
-            $table->string('genre', 20);
-            $table->year('year');
-            $table->text('description');
-            $table->string('cover', 150);
-            $table->timestamps();
-        });
+        Schema::create('movie', function (Blueprint $table) {});
     }
 
     /**
