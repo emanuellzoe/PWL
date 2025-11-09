@@ -23,7 +23,7 @@
                         <td>{{ $m->title }}</td>
                         <td>{{ $m->genre }}</td>
                         <td>{{ $m->year }}</td>
-                        <td>{{ $m->poster }}</td>
+                        <td><img src="{{ $m->poster }}" alt="{{ $m->title }}" width="100"></td>
                     </tr>
                     @endforeach
                 </tbody>
