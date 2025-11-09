@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
     protected $table = 'movie';
+    // protected $fillable = [
+    //     'imdb', 'title', 'genre', 'year', 'description', 'cover'
+    // ];
+
     protected $fillable = [
-        'imdb', 'title', 'genre', 'year', 'description', 'cover'
+        'title', 'director', 'release_year', 'genre'
+
     ];
 }
