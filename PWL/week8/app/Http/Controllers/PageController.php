@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use App\Movie;
 
 
 //2
@@ -16,7 +17,8 @@ class PageController extends Controller
 
     public function movie()
     {
-        return view('movie', ['key' => 'movie']);
+        $movie = Movie::all();
+        return view('movie', ['key' => 'movie', 'mv' => $movie]);
     }
 
     public function genre()
