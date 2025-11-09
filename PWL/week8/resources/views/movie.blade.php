@@ -3,7 +3,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <a href="/movie/addfrom" class="btn btn-primary"><i class="bi bi-plus-square"></i></a>
+            <a href="/movie/addform" class="btn btn-primary"><i class="bi bi-plus-square"></i></a>
         </div>
         <div class="card-body">
             <table id="example" class="display" style="width: 100%" >
