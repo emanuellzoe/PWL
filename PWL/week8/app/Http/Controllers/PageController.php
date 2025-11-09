@@ -27,6 +27,6 @@ class PageController extends Controller
     }
     public function movieaddform()
     {
-        return view('movie_addform', ['key' => 'movie']);
+        return view('movieaddform', ['key' => 'movie']);
     }
 }
