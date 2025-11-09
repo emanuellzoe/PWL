@@ -20,7 +20,7 @@ class MovieSeeder extends Seeder
         for ($i = 1; $i <= 100; $i++) {
             DB::table('movie')->insert([
                 'imdb' => $faker->randomNumber(5, true),
-                'title' => substr($faker->words(3, true), 0, 50),
+                'title' => $faker->words(3, true),
                 'genre' => $faker->word(),
                 'year' => $faker->date(),
                 'description' => $faker->text(),
