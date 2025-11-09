@@ -17,7 +17,7 @@ class PageController extends Controller
 
     public function movie()
     {
-        $movie = Movie::all();
+        $movie = Movie::orderBy('id', 'desc')->get();
         return view('movie', ['key' => 'movie', 'mv' => $movie]);
     }
 
@@ -29,4 +29,27 @@ class PageController extends Controller
     {
         return view('movieaddform', ['key' => 'movie']);
     }
+
+    public function moviesave(Request $request)
+    {
+        if($request->hasFile('poster'))
+        {
+            $file_name = time().'-'.$request->file('cover')->getClientOriginalName();
+            $path = $request->file('cover')->storeAs('cover', $file_name,'public');
+        } else
+        {
+            $file_name = null;
+            $path = null;
+        }
+        Movie::create([
+            'imdb' => $request->imdb,
+            'title' => $request->title,
+            'genre' => $request->genre,
+            'year' => $request->year,
+            'description' => $request->description,
+            'cover' => $file_name
+        ]);
+        return redirect('/movie');
+    }
+
 }

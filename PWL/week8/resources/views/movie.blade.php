@@ -14,7 +14,7 @@
                         <th>Title</th>
                         <th>Genre</th>
                         <th>Year</th>
-                        <th>Poster</th>
+                        <th>Cover</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +25,13 @@
                         <td>{{ $m->title }}</td>
                         <td>{{ $m->genre }}</td>
                         <td>{{ $m->year }}</td>
-                        <td><img src="{{ $m->poster }}" alt="{{ $m->title }}" width="100"></td>
+                        <td>
+                            @if ($m->cover)
+                                <img src="{{ asset('/storage/cover/'.$m->cover) }}" alt="$m->cover" width="80" height="80">
+                            @else
+                                <img src="{{ asset('/storage/cover/no-image.jpg')}}" alt="No Image" width="80" height="80">
+                            @endif
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -15,16 +15,16 @@ class MovieSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create('id_ID');
+        $faker = Faker::create();
 
         for ($i = 1; $i <= 100; $i++) {
             DB::table('movie')->insert([
-                'imdb' => $faker->uuid(),
+                'imdb' => $faker->randomNumber(5, true),
                 'title' => substr($faker->words(3, true), 0, 50),
                 'genre' => $faker->word(),
-                'year' => $faker->date('Y'),
+                'year' => $faker->date(),
                 'description' => $faker->text(),
-                'cover' => $faker->imageUrl(640, 480, 'animals'),
+                'cover' => $faker->image(null,640, 480),
             ]);
         }
     }
