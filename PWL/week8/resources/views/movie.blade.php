@@ -27,9 +27,9 @@
                         <td>{{ $m->year }}</td>
                         <td>
                             @if ($m->cover)
-                                <img src="{{ asset('/storage/cover/'.$m->cover) }}" alt="$m->cover" width="80" height="80">
+                                <img src="{{ asset('/storage/cover/'.$m->cover) }}" alt="{{ $m->cover }}" width="80" height="80">
                             @else
-                                <img src="{{ asset('/storage/cover/no-image.jpg')}}" alt="No Image" width="80" height="80">
+                                <img src="{{ asset('storage/cover/no-image.jpg') }}" alt="No Image" width="80" height="80">
                             @endif
                         </td>
                     </tr>

@@ -32,7 +32,7 @@ class PageController extends Controller
 
     public function moviesave(Request $request)
     {
-        if($request->hasFile('poster'))
+        if($request->hasFile('cover'))
         {
             $file_name = time().'-'.$request->file('cover')->getClientOriginalName();
             $path = $request->file('cover')->storeAs('cover', $file_name,'public');
