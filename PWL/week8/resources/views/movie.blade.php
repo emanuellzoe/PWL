@@ -15,6 +15,7 @@
                         <th>Genre</th>
                         <th>Year</th>
                         <th>Cover</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,9 @@
                             @else
                                 <img src="{{ asset('storage/cover/no-image.jpg') }}" alt="No Image" width="80" height="80">
                             @endif
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-success">Edit</a>
                         </td>
                     </tr>
                     @endforeach
