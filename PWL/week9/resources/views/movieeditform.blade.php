@@ -46,7 +46,16 @@
 
             <div class="form-group">
                 <label for="cover">Cover</label>
-                <input type="file" name="cover" id="cover" accept="image/" class="form-control" value="{{ $mv->cover }}">
+                <input type="file" name="cover" id="cover" accept="image/" class="form-control">
+            </div>
+
+            <div class="form-group">
+                @if ($m->cover)
+                    <img src="{{ asset('/storage/cover/'.$m->cover) }}" alt="{{ $m->cover }}" width="80" height="80">
+                @else
+                    <img src="{{ asset('storage/cover/no-image.jpg') }}" alt="No Image" width="80" height="80">
+                @endif
+                <br><small><i>*foto sebelumnya</i></small>
             </div>
 
             <div>
