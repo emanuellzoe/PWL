@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Movie;
+use Illuminate\Support\Facades\Storage;
 
 
 //2
@@ -61,23 +62,27 @@ class PageController extends Controller
     public function movieupdate(Request $request, $id)
     {
         $movie = Movie::find($id);
-        if($request->hasFile('cover'))
-        {
-            $file_name = time().'-'.$request->file('cover')->getClientOriginalName();
-            $path = $request->file('cover')->storeAs('cover', $file_name,'public');
-        } else
-        {
-            $file_name = $movie->cover;
-            $path = null;
-        }
         $movie->imdb = $request->imdb;
         $movie->title = $request->title;
         $movie->genre = $request->genre;
         $movie->year = $request->year;
         $movie->description = $request->description;
-        $movie->cover = $file_name;
+        
+        
+
+        if ($request->cover){
+            if ($movie->cover) {
+                Storage::disk('public')->delete('cover/'.$movie->cover);
+            }
+            $file_name = time().'-'.$request->file('cover')->getClientOriginalName();
+            $path = $request->file('cover')->storeAs('cover', $file_name,'public');
+            $movie->cover = $file_name;
+            }
         $movie->save();
         return redirect('/movie');
+
     }
 
-}
+    }
+
+
