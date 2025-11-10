@@ -4,7 +4,7 @@
     <div class="card">
     <div class="card-header"></div>
     <div class="card-body">
-        <form action="/movie/update" method="post" enctype="multipart/form-data">
+        <form action="/movie/update/{{ $mv->id }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
@@ -46,12 +46,12 @@
 
             <div class="form-group">
                 <label for="cover">Cover</label>
-                <input type="file" name="cover" id="cover" accept="image/" class="form-control">
+                <input type="file" name="cover" id="cover" accept="image/*" class="form-control">
             </div>
 
             <div class="form-group">
-                @if ($m->cover)
-                    <img src="{{ asset('/storage/cover/'.$m->cover) }}" alt="{{ $m->cover }}" width="80" height="80">
+                @if ($empty->cover)
+                    <img src="{{ asset('/storage/cover/'.$empty->cover) }}" alt="{{ $empty->cover }}" width="80" height="80">
                 @else
                     <img src="{{ asset('storage/cover/no-image.jpg') }}" alt="No Image" width="80" height="80">
                 @endif
