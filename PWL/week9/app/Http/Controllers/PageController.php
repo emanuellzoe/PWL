@@ -58,4 +58,26 @@ class PageController extends Controller
         return view('movieeditform', ['key' => 'movie', 'mv' => $movie]);
     }
 
+    public function movieupdate(Request $request, $id)
+    {
+        $movie = Movie::find($id);
+        if($request->hasFile('cover'))
+        {
+            $file_name = time().'-'.$request->file('cover')->getClientOriginalName();
+            $path = $request->file('cover')->storeAs('cover', $file_name,'public');
+        } else
+        {
+            $file_name = $movie->cover;
+            $path = null;
+        }
+        $movie->imdb = $request->imdb;
+        $movie->title = $request->title;
+        $movie->genre = $request->genre;
+        $movie->year = $request->year;
+        $movie->description = $request->description;
+        $movie->cover = $file_name;
+        $movie->save();
+        return redirect('/movie');
+    }
+
 }

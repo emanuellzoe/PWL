@@ -47,16 +47,19 @@
             <div class="form-group">
                 <label for="cover">Cover</label>
                 <input type="file" name="cover" id="cover" accept="image/*" class="form-control">
-            </div>
+                <div  class="mt-2">
+                    @if (!empty($mv->cover))
+                        <img src="{{ asset('storage/cover/' . $mv->cover) }}" alt="{{ $mv->title }}" width="80" height="80">
+                    @else
+                        <img src="{{ asset('storage/cover/no-image.jpg') }}" alt="No Image" width="80" height="80">
+                    @endif
 
-            <div class="form-group">
-                @if ($empty->cover)
-                    <img src="{{ asset('/storage/cover/'.$empty->cover) }}" alt="{{ $empty->cover }}" width="80" height="80">
-                @else
-                    <img src="{{ asset('storage/cover/no-image.jpg') }}" alt="No Image" width="80" height="80">
-                @endif
                 <br><small><i>*foto sebelumnya</i></small>
             </div>
+
+            </div>
+
+            
 
             <div>
                 <button type="submit" class="btn btn-primary">Simpan</button>
