@@ -85,8 +85,13 @@ class PageController extends Controller
 
     public function moviedelete($id)
     {
-        $movie
-
+        $movie = Movie::find($id);
+        if ($movie->cover) {
+            Storage::disk('public')->delete('cover/'.$movie->cover);
+        }
+        $movie->delete();
+        return redirect('/movie');
     }
+}
 
 
