@@ -55,7 +55,7 @@ class PageController extends Controller
     public function movieeditform($id)
     {
         $movie = Movie::find($id);
-        return $movie;
+        return view('movieeditform', ['key' => 'movie', 'mv' => $movie]);
     }
 
 }
