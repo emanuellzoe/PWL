@@ -52,4 +52,10 @@ class PageController extends Controller
         return redirect('/movie');
     }
 
+    public function movieeditform($id)
+    {
+        $movie = Movie::find($id);
+        return $movie;
+    }
+
 }
