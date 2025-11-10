@@ -83,6 +83,10 @@ class PageController extends Controller
 
     }
 
+    public function moviedelete($id)
+    {
+        $movie
+
     }
 
 
