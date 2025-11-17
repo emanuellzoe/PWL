@@ -6,6 +6,10 @@
             <a href="/movie/addform" class="btn btn-primary"><i class="bi bi-plus-square"></i></a>
         </div>
         <div class="card-body">
+            @if (session('alert'))
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>{{ session('alert') }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             <table id="example" class="display" style="width: 100%" >
                 <thead>
                     <tr>
