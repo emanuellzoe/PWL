@@ -50,7 +50,7 @@ class PageController extends Controller
             'description' => $request->description,
             'cover' => $file_name
         ]);
-        return redirect('/movie');
+        return redirect('/movie') -> with('alert', 'New movie has been added!');
     }
 
     public function movieeditform($id)
@@ -79,7 +79,7 @@ class PageController extends Controller
             $movie->cover = $file_name;
             }
         $movie->save();
-        return redirect('/movie');
+        return redirect('/movie') -> with('alert', 'Movie has been updated!');
 
     }
 
