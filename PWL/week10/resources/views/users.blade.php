@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Movie') 
+@section('title', 'User') 
 @section('content')
     <div class="card">
         <div class="card-header">
@@ -28,23 +28,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($mv as $idx => $m)
+                    @foreach ($us as $idx => $u)
                     <tr>
                         <td>{{ $idx + 1 }}</td>
-                        <td>{{ $m->imdb }}</td>
-                        <td>{{ $m->title }}</td>
-                        <td>{{ $m->genre }}</td>
-                        <td>{{ $m->year }}</td>
+                        <td>{{ $u->imdb }}</td>
+                        <td>{{ $u->title }}</td>
+                        <td>{{ $u->genre }}</td>
+                        <td>{{ $u->year }}</td>
                         <td>
-                            @if ($m->cover)
-                                <img src="{{ asset('/storage/cover/'.$m->cover) }}" alt="{{ $m->cover }}" width="80" height="80">
+                            @if ($u->cover)
+                                <img src="{{ asset('/storage/cover/'.$u->cover) }}" alt="{{ $u->cover }}" width="80" height="80">
                             @else
                                 <img src="{{ asset('storage/cover/no-image.jpg') }}" alt="No Image" width="80" height="80">
                             @endif
                         </td>
                         <td>
-                            <a href="/movie/editform/{{ $m->id }}" class="btn btn-success"> <i class="bi bi-pencil-square"></i></a>
-                            <a href="/movie/delete/{{ $m->id }}" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
+                            <a href="/movie/editform/{{ $u->id }}" class="btn btn-success"> <i class="bi bi-pencil-square"></i></a>
+                            <a href="/movie/delete/{{ $u->id }}" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
                         </td>
                     </tr>
                     @endforeach
