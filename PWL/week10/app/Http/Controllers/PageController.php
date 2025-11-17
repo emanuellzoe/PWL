@@ -93,6 +93,12 @@ class PageController extends Controller
         return redirect('/movie') -> with('alert', 'Movie has been deleted!');
     }
 
+    public function users()
+    {
+        $users = User::orderBy('id', 'desc')->get();
+        return view('users', ['key' => 'users', 'us' => $users]);
+    }
+
 }
 
 
