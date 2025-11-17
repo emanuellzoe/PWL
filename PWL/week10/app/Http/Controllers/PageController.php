@@ -90,8 +90,9 @@ class PageController extends Controller
             Storage::disk('public')->delete('cover/'.$movie->cover);
         }
         $movie->delete();
-        return redirect('/movie');
+        return redirect('/movie') -> with('alert', 'Movie has been deleted!');
     }
+
 }
 
 
