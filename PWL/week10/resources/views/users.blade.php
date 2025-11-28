@@ -31,12 +31,11 @@
                         <td>{{ $idx + 1 }}</td>
                         <td>{{ $u->name }}</td>
                         <td>{{ $u->email }}</td>
-                        <td>{{ $u->photo }}</td>
                         <td>
                             @if ($u->photo)
                                 <img src="{{ asset('/storage/photo/'.$u->photo) }}" alt="{{ $u->photo }}" width="80" height="80">
                             @else
-                                <img src="{{ asset('storage/photo/no-image.jpg') }}" alt="No Image" width="80" height="80">
+                                <img src="{{ asset('/storage/photo/no-image.jpg') }}" alt="No Image" width="80" height="80">
                             @endif
                         </td>
                         <td>
