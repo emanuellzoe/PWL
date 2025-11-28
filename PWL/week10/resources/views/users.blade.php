@@ -3,7 +3,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <a href="/movie/addform" class="btn btn-primary"><i class="bi bi-plus-square"></i></a>
+            <a href="/users/addform" class="btn btn-primary"><i class="bi bi-plus-square"></i></a>
         </div>
         <div class="card-body">
             @if (session('alert'))
@@ -43,8 +43,8 @@
                             @endif
                         </td>
                         <td>
-                            <a href="/movie/editform/{{ $u->id }}" class="btn btn-success"> <i class="bi bi-pencil-square"></i></a>
-                            <a href="/movie/delete/{{ $u->id }}" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
+                            <a href="/users/deleteform/{{ $u->id }}" class="btn btn-success"> <i class="bi bi-pencil-square"></i></a>
+                            
                         </td>
                     </tr>
                     @endforeach
