@@ -97,7 +97,32 @@ class PageController extends Controller
     public function users()
     {
         $users = User::orderBy('id', 'desc')->get();
-        return view('users', ['key' => 'users', 'us' => $users]);
+        return view('users', ['key' => 'users', 'users' => $users]);
+    }
+
+    public function usersaddform()
+    {
+        return view('usersaddform', ['key' => 'users']);
+    }
+
+    public function userssave(Request $request)
+    {
+        if($request->hasFile('photo'))
+        {
+            $file_name = time().'-'.$request->file('photo')->getClientOriginalName();
+            $path = $request->file('photo')->storeAs('photo', $file_name,'public');
+        } else
+        {
+            $file_name = null;
+            $path = null;
+        }
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'photo' => $file_name
+        ]);
+        return redirect('/users') -> with('alert', 'New user has been added!');
     }
 
 }

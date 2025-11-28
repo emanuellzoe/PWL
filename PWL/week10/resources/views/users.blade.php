@@ -19,27 +19,24 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>ImDB</th>
-                        <th>Title</th>
-                        <th>Genre</th>
-                        <th>Year</th>
-                        <th>Cover</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Photo</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($us as $idx => $u)
+                    @foreach ($users as $idx => $u)
                     <tr>
                         <td>{{ $idx + 1 }}</td>
-                        <td>{{ $u->imdb }}</td>
-                        <td>{{ $u->title }}</td>
-                        <td>{{ $u->genre }}</td>
-                        <td>{{ $u->year }}</td>
+                        <td>{{ $u->name }}</td>
+                        <td>{{ $u->email }}</td>
+                        <td>{{ $u->photo }}</td>
                         <td>
-                            @if ($u->cover)
-                                <img src="{{ asset('/storage/cover/'.$u->cover) }}" alt="{{ $u->cover }}" width="80" height="80">
+                            @if ($u->photo)
+                                <img src="{{ asset('/storage/photo/'.$u->photo) }}" alt="{{ $u->photo }}" width="80" height="80">
                             @else
-                                <img src="{{ asset('storage/cover/no-image.jpg') }}" alt="No Image" width="80" height="80">
+                                <img src="{{ asset('storage/photo/no-image.jpg') }}" alt="No Image" width="80" height="80">
                             @endif
                         </td>
                         <td>
