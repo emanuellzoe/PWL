@@ -39,8 +39,8 @@
                             @endif
                         </td>
                         <td>
-                            <a href="/users/deleteform/{{ $u->id }}" class="btn btn-success"> <i class="bi bi-pencil-square"></i></a>
-                            
+                            <a href="/users/deleteform/{{ $u->id }}" class="btn btn-danger"> <i class="bi bi-trash"></i></a>
+            
                         </td>
                     </tr>
                     @endforeach

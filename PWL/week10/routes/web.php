@@ -24,3 +24,4 @@ Route::get('/movie/delete/{id}', 'PageController@moviedelete');
 Route::get('/users','PageController@users');
 Route::get('/users/addform', 'PageController@usersaddform');
 Route::post('/users/save', 'PageController@userssave');
+Route::get('/users/deleteform/{id}', 'PageController@usersdelete');

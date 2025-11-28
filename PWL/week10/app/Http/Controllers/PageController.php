@@ -125,6 +125,16 @@ class PageController extends Controller
         return redirect('/users') -> with('alert', 'New user has been added!');
     }
 
+    public function usersdelete($id)
+    {
+        $users = User::find($id);
+        if ($users->photo) {
+            Storage::disk('public')->delete('photo/'.$users->photo);
+        }
+        $users->delete();
+        return redirect('/users') -> with('alert', 'User has been deleted!');
+    }
+
 }
 
 
