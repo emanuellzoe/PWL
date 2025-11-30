@@ -29,3 +29,5 @@ Route::get('/users/deleteform/{id}', 'PageController@usersdelete');
 Route::get('/','AuthController@login');
 Route::post('/ceklogin','AuthController@ceklogin');
 Route::get('/logout','AuthController@logout');
+Route::get('/home', 'PageController@home')->middleware('auth');
+Route::get('/', 'AuthController@login')->name('login');
