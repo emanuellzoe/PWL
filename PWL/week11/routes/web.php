@@ -50,6 +50,9 @@ Route::group(['middleware' => ['auth']], function (){
     Route::get('/users/addform', 'PageController@usersaddform');
     Route::post('/users/save', 'PageController@userssave');
     Route::get('/users/deleteform/{id}', 'PageController@usersdelete');
-    
+
     Route::get('/logout','AuthController@logout');
 });
+
+Route::get('/setting','PageController@setting');
+Route::get('/updatepass', 'PageController@updatepass');
