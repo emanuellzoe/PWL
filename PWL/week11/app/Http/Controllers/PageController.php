@@ -155,7 +155,7 @@ class PageController extends Controller
             'password' => bcrypt($request->password_baru),
         ]);
 
-        return redirect('/users')->with('users','berhasil update password');
+        return redirect('/users')->with('alert','berhasil update password');
     }
 
 

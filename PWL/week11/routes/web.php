@@ -53,6 +53,6 @@ Route::group(['middleware' => ['auth']], function (){
 
     Route::get('/logout','AuthController@logout');
     Route::get('/setting', "PageController@setting");
-    Route::put('/updatepass', "PageController@setting");
+    Route::put('/updatepass', "PageController@updatepass");
 });
 

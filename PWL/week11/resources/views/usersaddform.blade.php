@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="avatar">Photo</label>
-                    <input type="file" name="photo" id="photo" accept="image/" class="form-control" required>
+                    <input type="file" name="photo" id="photo" accept="photo/" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </form>
