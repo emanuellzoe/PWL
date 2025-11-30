@@ -135,6 +135,27 @@ class PageController extends Controller
         return redirect('/users') -> with('alert', 'User has been deleted!');
     }
 
+    public function setting()
+    {
+        return view('setting', ['key' => 'setting']);
+    }
+
+    public function updatepass(Request $request)
+    {
+        $user = auth()->user();
+
+        if (!Auth::attempt(['email' => $user->email,'password'=> $request->password_lama]))
+        {
+            return redirect('/setting')->with('alert', 'Current password is incorrect!');
+        }
+        else
+        {
+            $user->password = bcrypt($request->password_baru);
+            $user->save();
+        }
+        return redirect('/setting')->with('alert', 'Password has been updated!');
+    }
+
 }
 
 
