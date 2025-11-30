@@ -24,10 +24,11 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" type="#">
                             <div class="media">
-                                <img src="https://i.pinimg.com/736x/dc/09/8a/dc098aefa6d83755f223da9f8206bc6f.jpg"
+                                <img src="{{ Auth::user()->photo
+                                ? asset('storage/photo/' . Auth::user()->photo) : asset('/storage/photo/no-image.png') }}"
                                     width="50" height="50" class="align-self-center mr-3" alt="...">
                                 <div class="media-body">
-                                    <h5 class="mt-0">Jiwo</h5>
+                                    <h5 class="mt-0">{{ Auth::user()->name }}</h5>
                                     <small>
                                         <p class="mb-0"><i class="bi bi-clock"></i> Pkl 16:00 WIB</p>
                                     </small>
@@ -35,7 +36,7 @@
                             </div>
                         </a>
                         <a class="dropdown-item" type="#"><i class="bi bi-gear"></i> Setting</a>
-                        <a class="dropdown-item" type="#"><i class="bi bi-box-arrow-left"></i> Logout</a>
+                        <a class="dropdown-item" href="/logout"><i class="bi bi-box-arrow-left"></i> Logout</a>
                     </div>
                 </div>
             </div>

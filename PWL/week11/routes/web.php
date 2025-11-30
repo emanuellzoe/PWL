@@ -28,3 +28,4 @@ Route::get('/users/deleteform/{id}', 'PageController@usersdelete');
 
 Route::get('/','AuthController@login');
 Route::post('/ceklogin','AuthController@ceklogin');
+Route::get('/logout','AuthController@logout');
