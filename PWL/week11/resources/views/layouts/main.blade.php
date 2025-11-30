@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="dropdown-item" type="#"><i class="bi bi-gear"></i> Setting</a>
+                        <a class="dropdown-item" href="/setting"><i class="bi bi-gear"></i> Setting</a>
                         <a class="dropdown-item" href="/logout"><i class="bi bi-box-arrow-left"></i> Logout</a>
                     </div>
                 </div>

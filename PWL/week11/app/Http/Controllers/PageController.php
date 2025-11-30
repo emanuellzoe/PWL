@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-
-use App\User;
 use Illuminate\Http\Request;
 use App\Movie;
+use App\User;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 
 //2
@@ -137,24 +137,27 @@ class PageController extends Controller
 
     public function setting()
     {
-        return view('setting', ['key' => 'setting']);
+        return view('setting', ['key' => 'user']);
     }
 
     public function updatepass(Request $request)
     {
-        $user = auth()->user();
+        $user = Auth::user();
 
-        if (!Auth::attempt(['email' => $user->email,'password'=> $request->password_lama]))
-        {
-            return redirect('/setting')->with('alert', 'Current password is incorrect!');
+        if (!Auth::attempt([
+            'email' => $user->email,
+            'password' => $request->password_lama
+        ])) {
+            return redirect('/setting');
         }
-        else
-        {
-            $user->password = bcrypt($request->password_baru);
-            $user->save();
-        }
-        return redirect('/setting')->with('alert', 'Password has been updated!');
+
+        $user->update([
+            'password' => bcrypt($request->password_baru),
+        ]);
+
+        return redirect('/users')->with('users','berhasil update password');
     }
+
 
 }
 

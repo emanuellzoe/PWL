@@ -20,7 +20,7 @@ class AuthController extends Controller
         }
         else
         {
-            return redirect('/movie');
+            return redirect('/home');
         }
 
     }
