@@ -17,4 +17,4 @@ use Illuminate\Http\Request;
 // });
 
 
-Route::get('/v1/api/movies', 'MoviesAPIController@apimovies');
+Route::get('/v1/api/movies', 'MovieAPIController@apimovies');

@@ -7,7 +7,7 @@ use App\Movie;
 
 class MovieAPIController extends Controller
 {
-    //
+
     public function apimovies()
     {
         $movie = Movie::orderby("id", "desc")->get();
