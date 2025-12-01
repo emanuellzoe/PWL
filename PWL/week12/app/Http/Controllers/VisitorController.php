@@ -8,6 +8,6 @@ class VisitorController extends Controller
 {
     public function searchmovie()
     {
-        return view('seacrhmovie');
+        return view('searchmovie');
     }
 }
