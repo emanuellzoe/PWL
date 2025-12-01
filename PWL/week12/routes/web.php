@@ -32,16 +32,19 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/home', 'PageController@home')->middleware('auth');
 // Route::get('/', 'AuthController@login')->name('login');
 
-Route::group(['middleware' => ['guest']], function (){
+Route::group(['middleware' => ['guest']], function () {
+    //quest
     Route::get('/', 'AuthController@login')->name('login');
-    Route::post('/ceklogin','AuthController@ceklogin');
+    Route::post('/ceklogin', 'AuthController@ceklogin');
+    Route::get('/searchmovie', 'VisitorController@searchmovie');
 });
 
-Route::group(['middleware' => ['auth']], function (){
+Route::group(['middleware' => ['auth']], function () {
+    //admin
     Route::get('/home', 'PageController@home');
     Route::get('/movie', 'PageController@movie');
     Route::get('/genre', 'PageController@genre');
-    Route::get('/users','PageController@users');
+    Route::get('/users', 'PageController@users');
     Route::get('/movie/addform', 'PageController@movieaddform');
     Route::post('/movie/save', 'PageController@moviesave');
     Route::get('/movie/editform/{id}', 'PageController@movieeditform');
@@ -51,8 +54,7 @@ Route::group(['middleware' => ['auth']], function (){
     Route::post('/users/save', 'PageController@userssave');
     Route::get('/users/deleteform/{id}', 'PageController@usersdelete');
 
-    Route::get('/logout','AuthController@logout');
+    Route::get('/logout', 'AuthController@logout');
     Route::get('/setting', "PageController@setting");
     Route::put('/updatepass', "PageController@updatepass");
 });
-
