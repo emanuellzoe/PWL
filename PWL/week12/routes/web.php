@@ -37,6 +37,7 @@ Route::group(['middleware' => ['guest']], function () {
     Route::get('/login', 'AuthController@login')->name('login');
     Route::post('/ceklogin', 'AuthController@ceklogin');
     Route::get('/', 'VisitorController@searchmovie');
+    Route::get('/actsearchmovie', 'VisitorController@actsearchmovie');
 });
 
 Route::group(['middleware' => ['auth']], function () {
