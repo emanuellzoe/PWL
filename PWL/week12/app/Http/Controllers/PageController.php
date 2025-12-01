@@ -34,12 +34,10 @@ class PageController extends Controller
 
     public function moviesave(Request $request)
     {
-        if($request->hasFile('cover'))
-        {
-            $file_name = time().'-'.$request->file('cover')->getClientOriginalName();
-            $path = $request->file('cover')->storeAs('cover', $file_name,'public');
-        } else
-        {
+        if ($request->hasFile('cover')) {
+            $file_name = time() . '-' . $request->file('cover')->getClientOriginalName();
+            $path = $request->file('cover')->storeAs('cover', $file_name, 'public');
+        } else {
             $file_name = null;
             $path = null;
         }
@@ -51,7 +49,7 @@ class PageController extends Controller
             'description' => $request->description,
             'cover' => $file_name
         ]);
-        return redirect('/movie') -> with('alert', 'New movie has been added!');
+        return redirect('/movie')->with('alert', 'New movie has been added!');
     }
 
     public function movieeditform($id)
@@ -68,30 +66,29 @@ class PageController extends Controller
         $movie->genre = $request->genre;
         $movie->year = $request->year;
         $movie->description = $request->description;
-        
-        
 
-        if ($request->cover){
+
+
+        if ($request->cover) {
             if ($movie->cover) {
-                Storage::disk('public')->delete('cover/'.$movie->cover);
+                Storage::disk('public')->delete('cover/' . $movie->cover);
             }
-            $file_name = time().'-'.$request->file('cover')->getClientOriginalName();
-            $path = $request->file('cover')->storeAs('cover', $file_name,'public');
+            $file_name = time() . '-' . $request->file('cover')->getClientOriginalName();
+            $path = $request->file('cover')->storeAs('cover', $file_name, 'public');
             $movie->cover = $file_name;
-            }
+        }
         $movie->save();
-        return redirect('/movie') -> with('alert', 'Movie has been updated!');
-
+        return redirect('/movie')->with('alert', 'Movie has been updated!');
     }
 
     public function moviedelete($id)
     {
         $movie = Movie::find($id);
         if ($movie->cover) {
-            Storage::disk('public')->delete('cover/'.$movie->cover);
+            Storage::disk('public')->delete('cover/' . $movie->cover);
         }
         $movie->delete();
-        return redirect('/movie') -> with('alert', 'Movie has been deleted!');
+        return redirect('/movie')->with('alert', 'Movie has been deleted!');
     }
 
     public function users()
@@ -107,12 +104,10 @@ class PageController extends Controller
 
     public function userssave(Request $request)
     {
-        if($request->hasFile('photo'))
-        {
-            $file_name = time().'-'.$request->file('photo')->getClientOriginalName();
-            $path = $request->file('photo')->storeAs('photo', $file_name,'public');
-        } else
-        {
+        if ($request->hasFile('photo')) {
+            $file_name = time() . '-' . $request->file('photo')->getClientOriginalName();
+            $path = $request->file('photo')->storeAs('photo', $file_name, 'public');
+        } else {
             $file_name = null;
             $path = null;
         }
@@ -122,17 +117,17 @@ class PageController extends Controller
             'password' => bcrypt($request->password),
             'photo' => $file_name
         ]);
-        return redirect('/users') -> with('alert', 'New user has been added!');
+        return redirect('/users')->with('alert', 'New user has been added!');
     }
 
     public function usersdelete($id)
     {
         $users = User::find($id);
         if ($users->photo) {
-            Storage::disk('public')->delete('photo/'.$users->photo);
+            Storage::disk('public')->delete('photo/' . $users->photo);
         }
         $users->delete();
-        return redirect('/users') -> with('alert', 'User has been deleted!');
+        return redirect('/users')->with('alert', 'User has been deleted!');
     }
 
     public function setting()
@@ -155,10 +150,6 @@ class PageController extends Controller
             'password' => bcrypt($request->password_baru),
         ]);
 
-        return redirect('/users')->with('alert','berhasil update password');
+        return redirect('/users')->with('alert', 'berhasil update password');
     }
-
-
 }
-
-
