@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class VisitorController extends Controller
 {
-    //
+    public function searchmovie()
+    {
+        return view('seacrhmovie');
+    }
 }
