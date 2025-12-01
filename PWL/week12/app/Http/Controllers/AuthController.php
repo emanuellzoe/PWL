@@ -14,20 +14,16 @@ class AuthController extends Controller
 
     public function cekLogin(Request $request)
     {
-        if (!Auth::attempt(['email' => $request->email,'password'=> $request->password]))
-        {
-            return redirect('/');
-        }
-        else
-        {
+        if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect('/login');
+        } else {
             return redirect('/home');
         }
-
     }
 
     function logout()
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/login');
     }
 }
